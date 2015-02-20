@@ -1,6 +1,7 @@
 ﻿#region
 
 using System;
+using System.IO;
 using System.Windows.Forms;
 using Superfish_Removal_Tool.Forms;
 
@@ -21,6 +22,9 @@ namespace Superfish_Removal_Tool
 
             if (IsRunningWin8())
             {
+                if (!Directory.Exists("nss") || !File.Exists("nss/certutil.exe"))
+                    MessageBox.Show("CertUtil.exe is required to remove certificates from Mozilla products..", "Missing CertUtil.exe", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 Application.Run(new MainForm());
             }
 

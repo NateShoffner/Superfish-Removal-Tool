@@ -53,6 +53,7 @@
       <DependentUpon>BrowsersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BrowserUtilities.cs" />
+    <Compile Include="Removers\MozillaRemover.cs" />
     <Compile Include="Removers\CertificateRemover.cs" />
     <Compile Include="ISuperfishRemover.cs" />
     <Compile Include="Forms\MainForm.cs">

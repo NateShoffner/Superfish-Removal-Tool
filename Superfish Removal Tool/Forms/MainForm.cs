@@ -37,8 +37,9 @@ namespace Superfish_Removal_Tool.Forms
         {
             var certificateRemover = new CertificateRemover();
             var serviceRemover = new ServiceRemover();
+            var mozillaRemover = new MozillaRemover();
 
-            var removers = new List<ISuperfishRemover> {certificateRemover, serviceRemover};
+            var removers = new List<ISuperfishRemover> { certificateRemover, serviceRemover, mozillaRemover };
             progressBar1.Maximum = removers.Count;
             var failedRemovals = 0;
 
